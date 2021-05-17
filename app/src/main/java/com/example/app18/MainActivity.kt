@@ -1,8 +1,7 @@
 package com.example.app18
 
 import android.os.Bundle
-import android.view.ViewGroup
-import android.widget.FrameLayout
+import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 
@@ -28,10 +27,9 @@ class MainActivity : AppCompatActivity() {
 //        root.addView(view3)
 
 
-        val root = findViewById<LinearLayout>(R.id.root)
-        val view4 = layoutInflater.inflate(R.layout.frame_item, root, true)
-
-
+        val rootContent = findViewById<LinearLayout>(R.id.root_content)
+        val list: List<View> = List(100) { layoutInflater.inflate(R.layout.frame_item, rootContent, false) }
+        list.forEach{rootContent.addView(it)}
 
     }
 }

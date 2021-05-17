@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">App18</string>
     <string name="test">test test test test test</string>
+    <string name="item_count">item_count</string>
 </resources>
