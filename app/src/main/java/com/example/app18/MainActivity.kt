@@ -3,6 +3,7 @@ package com.example.app18
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -27,9 +28,17 @@ class MainActivity : AppCompatActivity() {
 //        root.addView(view3)
 
 
-        val rootContent = findViewById<LinearLayout>(R.id.root_content)
-        val list: List<View> = List(100) { layoutInflater.inflate(R.layout.frame_item, rootContent, false) }
-        list.forEach{rootContent.addView(it)}
+        val rootContent = findViewById<LinearLayout>(R.id.root_content) //корневой layout
+        var count = 1 //счетчик элемента
+        val list: List<View> = List(100) {//заполняю список нумерованными элементами
+            val item = layoutInflater.inflate(R.layout.frame_item, rootContent, false) //элемент
+            val iconText = item.findViewById<TextView>(R.id.icon_text) //текст на элементе
+            iconText.setText("$count")  //передаем значение счетчика
+            count++ //увеличиваем счетчик
+            item //возвращаем готовый элемент
+        }
+
+        list.forEach { rootContent.addView(it) } //добавляем элемент в корневой layout
 
     }
 }
