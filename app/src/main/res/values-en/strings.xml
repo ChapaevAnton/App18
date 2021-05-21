@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App18</string>
+    <string name="main.view.my_text"><font color="#2A4480">Not</font> the fact that\nlife is not lucky\n%s</string>
+    <string name="main.view.my_button">click me</string>
+    <string name="main.view.my_name">Anton</string>
+    <plurals name="month">
+        <item quantity="one">January</item>
+        <item quantity="other">February</item>
+    </plurals>
+</resources>

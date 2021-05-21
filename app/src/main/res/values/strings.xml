@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">App18</string>
-    <string name="test">test test test test test</string>
-    <string name="item_count">item_count</string>
+    <string name="test" translatable="false">test test test test test</string>
+    <string name="item_count" translatable="false">item_count</string>
+    <string name="main.view.my_button">нажми меня</string>
+    <string name="main.view.my_text"><font color="#2A4480">Не</font> факт что не\nфарт по жизни\n%s</string>
+    <string name="main.view.my_name">Антон</string>
+    <plurals name="month">
+        <item quantity="one">январь</item>
+        <item quantity="other">февраль</item>
+    </plurals>
 </resources>
