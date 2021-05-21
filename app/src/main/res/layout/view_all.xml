@@ -41,7 +41,7 @@
         android:background="@color/red"
         android:scaleType="fitXY"
         android:src="@drawable/vinni_pukh"
-        android:tintMode="src_atop"
+        android:tintMode="multiply"
         app:tint="#902828" />
 
 </RelativeLayout>
