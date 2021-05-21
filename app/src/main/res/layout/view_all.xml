@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:alpha="1"
         android:autoLink="all"
         android:ellipsize="middle"
         android:linksClickable="true"
@@ -15,7 +17,6 @@
         android:shadowColor="@color/black"
         android:shadowDx="5"
         android:shadowDy="5"
-        android:alpha="1"
         android:shadowRadius="5"
         android:text="@string/main.view.my_text"
         android:textColor="@color/red"
@@ -32,11 +33,15 @@
         android:text="@string/main.view.my_button" />
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_above="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:background="@color/red"
+        android:scaleType="fitXY"
+        android:src="@drawable/vinni_pukh"
+        android:tintMode="src_atop"
+        app:tint="#902828" />
 
 </RelativeLayout>
