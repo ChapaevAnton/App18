@@ -21,15 +21,17 @@
         android:text="@string/main.view.my_text"
         android:textColor="@color/red"
         android:textColorLink="@color/purple_500"
-        android:textSize="25sp"
+        android:textSize="@dimen/my_font_size"
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/main.view.button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/my_margin_size"
+
         android:text="@string/main.view.my_button" />
 
     <ImageView
@@ -37,7 +39,7 @@
         android:layout_height="100dp"
         android:layout_above="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="@dimen/my_margin_size"
         android:background="@color/red"
         android:scaleType="fitXY"
         android:src="@drawable/vinni_pukh"

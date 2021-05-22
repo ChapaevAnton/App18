@@ -4,9 +4,13 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
-import android.widget.TextView
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.constraintlayout5.*
+import kotlinx.android.synthetic.main.item.*
 import kotlinx.android.synthetic.main.view_all.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,11 +18,50 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.view_all)
+        setContentView(R.layout.button_all)
+
+        //TODO 20.5
+//        val button1 = findViewById<Button>(R.id.main_view_button1)
+//        button1.setOnClickListener{
+//            val name = getString(R.string.main_view_my_name)
+//            Toast.makeText(this, getString(R.string.main_view_my_text, name), Toast.LENGTH_LONG).show()
+//        }
+
+
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
+        val toggleButton = findViewById<ToggleButton>(R.id.toggleButton)
+        val checkBox = findViewById<CheckBox>(R.id.checkBox)
+        val switch1 = findViewById<SwitchCompat>(R.id.switch1)
+
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            if (checkedId == R.id.radioButton1)
+                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+            else
+                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+        }
+        toggleButton.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked)
+                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+            else
+                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+        }
+        checkBox.setOnClickListener {
+            if (checkBox.isChecked)
+                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+            else
+                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+        }
+
+        switch1.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked)
+                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+            else
+                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+        }
 
         //TODO 20.3 https://habr.com/ru/post/307798/
 
-        val textView = findViewById<TextView>(R.id.textView1)
+//        val textView = findViewById<TextView>(R.id.textView1)
 
 //        val name: SpannableString = SpannableString(getString(R.string.main_view_my_name))
 //        name.setSpan(
@@ -72,5 +115,10 @@ class MainActivity : AppCompatActivity() {
 //
 //        list.forEach { rootContent.addView(it) } //добавляем элемент в корневой layout
 
+    }
+
+    fun clickButton(view: View) {
+        val name = getString(R.string.main_view_my_name)
+        Toast.makeText(this, getString(R.string.main_view_my_text, name), Toast.LENGTH_LONG).show()
     }
 }
