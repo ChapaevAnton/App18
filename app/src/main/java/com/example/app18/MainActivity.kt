@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.button_all)
+        setContentView(R.layout.view_all)
 
         //TODO 20.5
 //        val button1 = findViewById<Button>(R.id.main_view_button1)
@@ -28,36 +28,36 @@ class MainActivity : AppCompatActivity() {
 //        }
 
 
-        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-        val toggleButton = findViewById<ToggleButton>(R.id.toggleButton)
-        val checkBox = findViewById<CheckBox>(R.id.checkBox)
-        val switch1 = findViewById<SwitchCompat>(R.id.switch1)
-
-        radioGroup.setOnCheckedChangeListener { _, checkedId ->
-            if (checkedId == R.id.radioButton1)
-                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
-            else
-                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
-        }
-        toggleButton.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked)
-                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
-            else
-                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
-        }
-        checkBox.setOnClickListener {
-            if (checkBox.isChecked)
-                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
-            else
-                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
-        }
-
-        switch1.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked)
-                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
-            else
-                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
-        }
+//        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
+//        val toggleButton = findViewById<ToggleButton>(R.id.toggleButton)
+//        val checkBox = findViewById<CheckBox>(R.id.checkBox)
+//        val switch1 = findViewById<SwitchCompat>(R.id.switch1)
+//
+//        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+//            if (checkedId == R.id.radioButton1)
+//                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+//            else
+//                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+//        }
+//        toggleButton.setOnCheckedChangeListener { _, isChecked ->
+//            if (isChecked)
+//                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+//            else
+//                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+//        }
+//        checkBox.setOnClickListener {
+//            if (checkBox.isChecked)
+//                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+//            else
+//                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+//        }
+//
+//        switch1.setOnCheckedChangeListener { _, isChecked ->
+//            if (isChecked)
+//                Toast.makeText(this, "ВКЛ", Toast.LENGTH_SHORT).show()
+//            else
+//                Toast.makeText(this, "ВЫКЛ", Toast.LENGTH_SHORT).show()
+//        }
 
         //TODO 20.3 https://habr.com/ru/post/307798/
 

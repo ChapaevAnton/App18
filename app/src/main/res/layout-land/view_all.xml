@@ -4,11 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView1"
+
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/my_margin_size"
+        android:layout_marginStart="@dimen/my_margin_size"
+        android:background="@color/red"
+        android:scaleType="fitXY"
+        android:src="@drawable/vinni_pukh"
+        android:tintMode="multiply"
+        app:tint="#902828" />
+
+    <!--    https://stackoverflow.com/questions/64722733/android-background-drawable-not-working-in-button-since-android-studio-4-1-->
     <TextView
         android:id="@+id/textView1"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/my_margin_size"
+        android:layout_marginTop="@dimen/my_margin_size"
+        android:layout_toEndOf="@+id/imageView1"
         android:alpha="1"
         android:autoLink="all"
         android:ellipsize="middle"
@@ -24,7 +41,6 @@
         android:textSize="@dimen/my_font_size"
         android:textStyle="bold" />
 
-<!--    https://stackoverflow.com/questions/64722733/android-background-drawable-not-working-in-button-since-android-studio-4-1-->
     <android.widget.Button
         android:id="@+id/main.view.button1"
         android:layout_width="wrap_content"
@@ -36,16 +52,6 @@
         android:text="@string/main.view.my_button"
         android:padding="10dp"/>
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_above="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/my_margin_size"
-        android:background="@color/red"
-        android:scaleType="fitXY"
-        android:src="@drawable/vinni_pukh"
-        android:tintMode="multiply"
-        app:tint="#902828" />
+
 
 </RelativeLayout>
